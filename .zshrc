@@ -1,8 +1,8 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=/opt/rh/rh-php71/root/bin:/opt/laravel/spark-installer:/home/mbutler/.config/composer/vendor/bin:$HOME/bin:/usr/local/bin:$PATH
+export PATH=/opt/rh/rh-php71/root/bin:/opt/laravel/spark-installer:$HOME/.config/composer/vendor/bin:$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=/home/mbutler/.oh-my-zsh
+export ZSH=$HOME/.oh-my-zsh
 
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
@@ -116,24 +116,24 @@ alias config='git --git-dir=$HOME/.dotfiles --work-tree=$HOME'
 # Usage:   clocate $regexFileName $path=pwd
 # Example: clocate .zsh*          ../../
 clocate() {
-	if [ -z $2 ]; then
-		directory=$(pwd)
-	else
-		directory=$2
-	fi
+    if [ -z $2 ]; then
+        directory=$(pwd)
+    else
+        directory=$2
+    fi
 
-	locate -ir $(realpath $directory)/".*"/"$1"
+    locate -ir $(realpath $directory)/".*"/"$1"
 }
 
 artisan() {
-	local pathToArtisan='';
-	if [ -f 'artisan' ]; then pathToArtisan='artisan';
-	elif [ -f $(git rev-parse --show-toplevel 2>/dev/null)'/artisan' ]; then pathToArtisan="$(git rev-parse --show-toplevel 2>/dev/null)/artisan";
-	elif [ -f $(git rev-parse --show-toplevel 2>/dev/null)'/emr/artisan' ]; then pathToArtisan="$(git rev-parse --show-toplevel 2>/dev/null)/emr/artisan";
-	elif [ -z "$pathToArtisan" ]; then echo "Could not find artisan"; return 1;
-	fi
+    local pathToArtisan='';
+    if [ -f 'artisan' ]; then pathToArtisan='artisan';
+    elif [ -f $(git rev-parse --show-toplevel 2>/dev/null)'/artisan' ]; then pathToArtisan="$(git rev-parse --show-toplevel 2>/dev/null)/artisan";
+    elif [ -f $(git rev-parse --show-toplevel 2>/dev/null)'/emr/artisan' ]; then pathToArtisan="$(git rev-parse --show-toplevel 2>/dev/null)/emr/artisan";
+    elif [ -z "$pathToArtisan" ]; then echo "Could not find artisan"; return 1;
+    fi
 
-	php $pathToArtisan $@
+    php $pathToArtisan $@
 }
 
 warp() {
