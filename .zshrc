@@ -105,7 +105,6 @@ export ZBEEP=''
 
 export LESS="-rSFX"
 
-alias php5="/opt/rh/rh-php56/root/bin/php"
 alias ls='ls --color="tty" -F'
 alias g='git'
 alias gs='git status'
