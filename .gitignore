@@ -1,1 +1,30 @@
+# repository holding dotfiles
 .dotfiles
+
+# history files
+.bash_history
+.lesshst
+.zsh_history
+.mysql_history
+
+# generic folder for cache
+.cache/*
+
+# mozilla cache
+.mozilla/*
+
+# local git config (name and email)
+.gitconfig.local
+
+# ssh (keys, shortcuts)
+.ssh/*
+
+# vim
+.vim/undodir/*
+.viminfo
+
+# zsh
+.oh-my-zsh/*
+.zcompdump*
+.zshrc.local
+
