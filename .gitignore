@@ -1,3 +1,7 @@
+# Hide regular files, show dotfiles
+/*
+!.*
+
 # repository holding dotfiles
 .dotfiles
 
@@ -6,11 +10,13 @@
 .lesshst
 .zsh_history
 .mysql_history
+.histfile
+.ghc/ghci_history
 
-# generic folder for cache
+# cache folders and files
 .cache/*
-
-# mozilla cache
+.local/*
+.dmenu_cache
 .mozilla/*
 
 # local git config (name and email)
@@ -21,10 +27,119 @@
 
 # vim
 .vim/undodir/*
+.vim/plugged/*
+.vim/backup/*
 .viminfo
 
 # zsh
 .oh-my-zsh/*
 .zcompdump*
 .zshrc.local
+.zsh-update
 
+# wine
+.wine/*
+
+# steam
+.steam/*
+.steampid
+.steampath
+
+# Haskell
+.stack/*
+.cabal/*
+
+# PHP
+.config/composer/*
+.spark/*
+
+# Softmaker
+.softmaker/*
+
+# Gnome
+.gnome/*
+.recently-used
+.config/gtk-2.0/*
+
+# KDE
+.kde4/*
+
+# Nvidea
+.nvidia-settings-rc
+.nv/*
+
+# Javascript (JS)
+.npm/*
+.config/configstore/*
+
+# Mono
+.mono/*
+.config/.mono/*
+
+# Java
+.java/*
+.install4j
+
+# Gradle
+.gradle
+
+# PulseAudio
+.esd_auth
+.config/pulse
+
+# AndroidStudio
+.AndroidStudio3.1/*
+.android
+
+# x windows server
+.Xauthority
+
+# KeePass
+.config/KeePass/*
+
+# Postman
+.config/Postman/*
+
+# QtProject
+.config/QtProject.conf
+.config/Trolltech.conf
+
+# Qterminal
+.config/qterminal.org/*
+
+# SpeedCrunch
+.config/SpeedCrunch/*
+
+# Albert
+.config/albert/*
+.config/menus/applications-merged/*
+
+# chromium
+.config/chromium/*
+
+# dconf
+.config/dconf/*
+
+# deepin
+.config/deepin/*
+
+# freerdp
+.config/freerdp/*
+
+# chrome
+.config/google-chrome/*
+
+# opera
+.config/opera/*
+
+# qutebrowser
+.config/qutebrowser/*
+
+# remmina
+.config/remmina/*
+
+# unity3d
+.config/unity3d/*
+
+# vlc
+.config/vlc/*
