@@ -143,3 +143,6 @@
 
 # vlc
 .config/vlc/*
+
+# nss
+.pki/*
