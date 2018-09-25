@@ -21,7 +21,7 @@ nnoremap > m'>
 nnoremap < m'<
 onoremap <expr> k v:operator =~ '>\\|<' ? 'k``' : 'k'
 
-"colorscheme pt_black
+colorscheme pt_black
 hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE    ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 set background=dark
 
