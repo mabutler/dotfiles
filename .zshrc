@@ -65,7 +65,14 @@ plugins=(
   git composer encode64 tmux
 )
 
-source $ZSH/oh-my-zsh.sh
+if ([[ -a $ZSH/oh-my-zsh.sh ]])
+then
+    source $ZSH/oh-my-zsh.sh
+else
+    echo 'Oh-my-zsh not installed. Run these commands, then source this file again:'
+    echo ' sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"'
+    echo ' mv ~/.zshrc.pre-oh-my-zsh ~/.zshrc'
+fi
 
 # User configuration
 
