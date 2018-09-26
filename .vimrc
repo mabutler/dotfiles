@@ -21,7 +21,7 @@ nnoremap > m'>
 nnoremap < m'<
 onoremap <expr> k v:operator =~ '>\\|<' ? 'k``' : 'k'
 
-"colorscheme pt_black
+colorscheme pt_black
 hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE    ctermfg=darkgray    ctermbg=NONE        cterm=NONE
 set background=dark
 
@@ -52,6 +52,12 @@ sunmap w
 sunmap b
 sunmap e
 sunmap ge
+
+" move between vim splits
+noremap <silent> <c-k> <C-W>k
+noremap <silent> <c-l> <C-W>l
+noremap <silent> <c-h> <C-W>h
+noremap <silent> <c-j> <C-W>j
 
 " GitGutter
 let g:gitgutter_sign_added = '∙'
