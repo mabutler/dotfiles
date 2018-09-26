@@ -40,8 +40,10 @@ Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'bkad/CamelCaseMotion'
 Plug 'shawncplus/phpcomplete.vim'
+Plug 'esalter-va/vim-checklist'
 call plug#end()
 
+" CamelCaseMotion
 map <silent> w <Plug>CamelCaseMotion_w
 map <silent> b <Plug>CamelCaseMotion_b
 map <silent> e <Plug>CamelCaseMotion_e
@@ -51,11 +53,16 @@ sunmap b
 sunmap e
 sunmap ge
 
+" GitGutter
 let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
 let g:gitgutter_sign_removed_first_line = '∙'
 let g:gitgutter_sign_modified_removed = '∙'
+
+" Checklist
+nnoremap <leader>cc :ChecklistToggleCheckbox<cr>
+vnoremap <leader>cc :ChecklistToggleCheckbox<cr>
 
 imap <Home> <Esc>^i
 
