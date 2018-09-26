@@ -51,6 +51,11 @@ sunmap b
 sunmap e
 sunmap ge
 
+noremap <silent> <c-k> <C-W>k
+noremap <silent> <c-l> <C-W>l
+noremap <silent> <c-h> <C-W>h
+noremap <silent> <c-j> <C-W>j
+
 let g:gitgutter_sign_added = '∙'
 let g:gitgutter_sign_modified = '∙'
 let g:gitgutter_sign_removed = '∙'
