@@ -4,14 +4,14 @@ set number
 set relativenumber
 set ignorecase
 
+" show hidden characters
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 set list
-
-set clipboard=unnamed
 
 set statusline+=%F
 set laststatus=2
 
+" code folding
 set foldmethod=indent
 set foldlevel=1
 
@@ -70,10 +70,10 @@ let g:gitgutter_sign_modified_removed = '∙'
 nnoremap <leader>cc :ChecklistToggleCheckbox<cr>
 vnoremap <leader>cc :ChecklistToggleCheckbox<cr>
 
+" move cursor to beginning of line when pressing home in insert mode
 imap <Home> <Esc>^i
 
 let g:used_javascript_libs = 'vue'
-
 let g:user_emmet_settings = {
 \   'php': {
 \       'extends':'html',
@@ -84,13 +84,16 @@ let g:user_emmet_settings = {
 \   }
 \}
 
+" use spaces instead of tabs
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set fileformat=unix
 set fileformats=unix
 
+" move vim files under hidden folder
 set backupdir=~/.vim/backup//
 set directory=~/.vim/backup//
 set undodir=~/.vim/undodir//
 set undofile
 
+" diff unsaved changes with what's on disk
 command ShowChanges w !diff -u % - | colordiff
