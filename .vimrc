@@ -97,3 +97,7 @@ set undofile
 
 " diff unsaved changes with what's on disk
 command ShowChanges w !diff -u % - | colordiff
+
+" make *.md open as markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+
