@@ -41,6 +41,7 @@ Plug 'ap/vim-css-color'
 Plug 'bkad/CamelCaseMotion'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'esalter-va/vim-checklist'
+Plug 'jwalton512/vim-blade'
 call plug#end()
 
 " CamelCaseMotion
