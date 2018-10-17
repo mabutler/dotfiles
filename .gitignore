@@ -12,12 +12,14 @@
 .mysql_history
 .histfile
 .ghc/ghci_history
+.psql_history
 
 # cache folders and files
 .cache/*
 .local/*
 .dmenu_cache
 .mozilla/*
+.filezilla/*
 
 # local git config (name and email)
 .gitconfig.local
@@ -146,3 +148,9 @@
 
 # nss
 .pki/*
+
+# gnupg
+.gnupg/*
+
+# dbus
+.dbus/*
