@@ -5,21 +5,32 @@
 # repository holding dotfiles
 .dotfiles
 
+# secure files
+.my.cnf.secure
+
 # history files
-.bash_history
 .lesshst
 .zsh_history
 .mysql_history
 .histfile
 .ghc/ghci_history
 .psql_history
+.config/psysh/psysh_history
 
 # cache folders and files
+.rnd
+.stats-htpasswd
+.bash_history
 .cache/*
 .local/*
 .dmenu_cache
 .mozilla/*
 .filezilla/*
+
+# bash
+.bash_logout
+.bash_profile
+.bashrc
 
 # local git config (name and email)
 .gitconfig.local
@@ -32,9 +43,17 @@
 .vim/plugged/*
 .vim/backup/*
 .viminfo
+.vim/.netrwhist
+
+# subversion
+.subversion/*
+
+# usermin
+.usermin/*
 
 # zsh
 .oh-my-zsh/*
+.oh-my-zsh/.*
 .zcompdump*
 .zshrc.local
 .zsh-update
@@ -72,6 +91,8 @@
 
 # Javascript (JS)
 .npm/*
+.npmrc
+.node-gyp/*
 .config/configstore/*
 
 # Mono
