@@ -52,8 +52,7 @@
 .usermin/*
 
 # zsh
-.oh-my-zsh/*
-.oh-my-zsh/.*
+.oh-my-zsh
 .zcompdump*
 .zshrc.local
 .zsh-update
