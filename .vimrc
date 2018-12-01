@@ -1,7 +1,16 @@
+" set mapleader
+let mapleader = " "
+
+" use system clipboard by default
 set clipboard=unnamed
+
+" show hidden characters
 set hidden
+" show line numbers
 set number
+" show line numbers from cursor
 set relativenumber
+" make search case insensitive by default
 set ignorecase
 
 " show hidden characters
@@ -15,6 +24,9 @@ set laststatus=2
 set foldmethod=indent
 set foldlevel=1
 
+" allow moving cursor over line ending
+set virtualedit=onemore
+
 "when indenting up, jump back to current location
 "https://vi.stackexchange.com/questions/12366/indent-lines-up-without-moving/
 nnoremap > m'>
@@ -26,6 +38,7 @@ hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE    ctermfg=dark
 set background=dark
 
 syntax on
+syntax sync minlines=30
 
 call plug#begin()
 Plug 'mattn/emmet-vim'
@@ -42,6 +55,7 @@ Plug 'bkad/CamelCaseMotion'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'esalter-va/vim-checklist'
 Plug 'jwalton512/vim-blade'
+"Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " CamelCaseMotion
