@@ -48,12 +48,6 @@ bindsym $mod+d exec albert show
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
-
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
 bindsym $mod+Down focus down
@@ -123,6 +117,8 @@ bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
 bindsym $mod+Shift+s exec deepin-screenshot
+
+bindsym $mod+l exec i3lock -i /home/matt/.config/backgrounds/locked.png
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
