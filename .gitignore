@@ -5,6 +5,9 @@
 # repository holding dotfiles
 .dotfiles
 
+# autostart entries
+.config/autostart/*
+
 # history files
 .bash_history
 .lesshst
@@ -26,6 +29,12 @@
 
 # ssh (keys, shortcuts)
 .ssh/*
+
+# mtpaint
+.mtpaint
+
+# skypeforlinux
+.config/skypeforlinux/*
 
 # vim
 .vim/undodir/*
