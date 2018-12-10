@@ -8,58 +8,22 @@
     ui = true
 [alias]
     a = add -A
-    aa = add -A
-    ai = add -i
-    au = add -u
 
     l = log --decorate
-    lo = log --oneline --decorate
-    l1 = log -1 --decorate
     lgo = log --graph --oneline --decorate
     lgoa = log --graph --oneline --decorate --all
 
     c = commit
     cm = commit -m
-    cr = commit --amend --reset-author
 
     co = checkout
-    cof = checkout -f
     cob = checkout -b
 
     b = branch -v
-    ba = branch --all
-    sb = show-branch
 
-    d = diff --color-words
-    dc = diff --color-words --cached
-    dno = diff --name-only
-    dc = diff --color-words --cached
-    dno = diff --name-only
-
-    fo = fetch origin
-    uo = push origin
-    do = pull origin
-
-    rb = rebase
-    rba = rebase --abort
-
-    rem = remote
     s = status
-    si = status --ignore-submodules
-    st = stash save
-    stashm = stash save
-    rmc = rm --cached
-    showref = show-ref --head --abbrev
 
     f = fetch
-    asun = update-index --assume-unchanged
-    nasun = update-index --no-assume-unchanged
-    last = log -1 --stat
-    cp = cherry-pick
-    cl = clone
-    ci = commit
-    br = branch
-    unstage = reset HEAD --
 
 [include]
     path = ./.gitconfig.local

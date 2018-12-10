@@ -5,6 +5,12 @@
 # repository holding dotfiles
 .dotfiles
 
+# autostart entries
+.config/autostart/*
+
+# secure files
+.my.cnf.secure
+
 # history files
 .bash_history
 .lesshst
@@ -12,12 +18,23 @@
 .mysql_history
 .histfile
 .ghc/ghci_history
+.psql_history
+.config/psysh/psysh_history
 
 # cache folders and files
+.rnd
+.stats-htpasswd
+.bash_history
 .cache/*
 .local/*
 .dmenu_cache
 .mozilla/*
+.filezilla/*
+
+# bash
+.bash_logout
+.bash_profile
+.bashrc
 
 # local git config (name and email)
 .gitconfig.local
@@ -25,14 +42,27 @@
 # ssh (keys, shortcuts)
 .ssh/*
 
+# mtpaint
+.mtpaint
+
+# skypeforlinux
+.config/skypeforlinux/*
+
 # vim
 .vim/undodir/*
 .vim/plugged/*
 .vim/backup/*
 .viminfo
+.vim/.netrwhist
+
+# subversion
+.subversion/*
+
+# usermin
+.usermin/*
 
 # zsh
-.oh-my-zsh/*
+.oh-my-zsh
 .zcompdump*
 .zshrc.local
 .zsh-update
@@ -70,6 +100,8 @@
 
 # Javascript (JS)
 .npm/*
+.npmrc
+.node-gyp/*
 .config/configstore/*
 
 # Mono
@@ -146,3 +178,18 @@
 
 # nss
 .pki/*
+
+# gnupg
+.gnupg/*
+
+# dbus
+.dbus/*
+
+# fehbg, why did this suddenly appear?
+.fehbg
+
+# xfce4
+.config/xfce4/*
+
+# deepin
+.config/deepin-calculator/*

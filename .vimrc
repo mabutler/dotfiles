@@ -1,19 +1,31 @@
+" set mapleader
+let mapleader = " "
+
+" use system clipboard by default
 set clipboard=unnamed
+
+" show hidden characters
 set hidden
+" show line numbers
 set number
+" show line numbers from cursor
 set relativenumber
+" make search case insensitive by default
 set ignorecase
 
+" show hidden characters
 set listchars=tab:>-,trail:~,extends:>,precedes:<
 set list
-
-set clipboard=unnamed
 
 set statusline+=%F
 set laststatus=2
 
+" code folding
 set foldmethod=indent
 set foldlevel=1
+
+" allow moving cursor over line ending
+set virtualedit=onemore
 
 "when indenting up, jump back to current location
 "https://vi.stackexchange.com/questions/12366/indent-lines-up-without-moving/
@@ -26,6 +38,7 @@ hi LineNr           guifg=#3D3D3D     guibg=black       gui=NONE    ctermfg=dark
 set background=dark
 
 syntax on
+syntax sync minlines=30
 
 call plug#begin()
 Plug 'mattn/emmet-vim'
@@ -41,6 +54,8 @@ Plug 'ap/vim-css-color'
 Plug 'bkad/CamelCaseMotion'
 Plug 'shawncplus/phpcomplete.vim'
 Plug 'esalter-va/vim-checklist'
+Plug 'jwalton512/vim-blade'
+"Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " CamelCaseMotion
@@ -70,10 +85,10 @@ let g:gitgutter_sign_modified_removed = '∙'
 nnoremap <leader>cc :ChecklistToggleCheckbox<cr>
 vnoremap <leader>cc :ChecklistToggleCheckbox<cr>
 
+" move cursor to beginning of line when pressing home in insert mode
 imap <Home> <Esc>^i
 
 let g:used_javascript_libs = 'vue'
-
 let g:user_emmet_settings = {
 \   'php': {
 \       'extends':'html',
@@ -84,13 +99,20 @@ let g:user_emmet_settings = {
 \   }
 \}
 
+" use spaces instead of tabs
 set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
 set fileformat=unix
 set fileformats=unix
 
+" move vim files under hidden folder
 set backupdir=~/.vim/backup//
 set directory=~/.vim/backup//
 set undodir=~/.vim/undodir//
 set undofile
 
+" diff unsaved changes with what's on disk
 command ShowChanges w !diff -u % - | colordiff
+
+" make *.md open as markdown
+autocmd BufNewFile,BufRead *.md set filetype=markdown
+

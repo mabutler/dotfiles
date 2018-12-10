@@ -12,6 +12,7 @@
 exec feh --bg-scale ~/.config/backgrounds/arch-linux-wallpaper-22.jpg
 exec --no-startup-id compton 
 exec albert
+exec xfce4-clipman
 
 set $mod Mod4
 
@@ -46,12 +47,6 @@ bindsym $mod+d exec albert show
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
-
-# change focus
-bindsym $mod+j focus left
-bindsym $mod+k focus down
-bindsym $mod+l focus up
-bindsym $mod+semicolon focus right
 
 # alternatively, you can use the cursor keys:
 bindsym $mod+Left focus left
@@ -121,6 +116,10 @@ bindsym $mod+Shift+8 move container to workspace 8
 bindsym $mod+Shift+9 move container to workspace 9
 bindsym $mod+Shift+0 move container to workspace 10
 
+bindsym $mod+Shift+s exec deepin-screenshot
+
+bindsym $mod+l exec i3lock -i /home/matt/.config/backgrounds/locked.png
+
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
@@ -163,3 +162,4 @@ bar {
 bindsym XF86AudioRaiseVolume exec /home/matt/.scripts/audioCtrls.sh up
 bindsym XF86AudioLowerVolume exec /home/matt/.scripts/audioCtrls.sh down
 bindsym XF86AudioMute exec /home/matt/.scripts/audioCtrls.sh mute
+
