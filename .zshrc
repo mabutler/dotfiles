@@ -65,6 +65,10 @@ plugins=(
   git composer encode64 tmux
 )
 
+if [ -f ~/.zshrc.oh-my-zsh.local ]; then
+    source ~/.zshrc.oh-my-zsh.local
+fi
+
 if ([[ -a $ZSH/oh-my-zsh.sh ]])
 then
     source $ZSH/oh-my-zsh.sh
@@ -150,6 +154,11 @@ warp() {
     # see https://github.com/mfaerevaag/wd
     USAGE="Usage: warp make|to|rm|show [bookmark]" ;
     local folder=$(git rev-parse --show-toplevel 2>/dev/null)
+
+    if  [[ -z $folder ]] ; then
+        folder=$HOME
+    fi
+
     if  [ ! -e $folder/.cd_bookmarks ] ; then
         mkdir $folder/.cd_bookmarks
     fi
