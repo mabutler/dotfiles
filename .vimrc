@@ -27,6 +27,8 @@ set foldlevel=1
 " allow moving cursor over line ending
 set virtualedit=onemore
 
+set timeoutlen=0
+
 "when indenting up, jump back to current location
 "https://vi.stackexchange.com/questions/12366/indent-lines-up-without-moving/
 nnoremap > m'>
@@ -115,4 +117,5 @@ command ShowChanges w !diff -u % - | colordiff
 
 " make *.md open as markdown
 autocmd BufNewFile,BufRead *.md set filetype=markdown
-
+autocmd InsertEnter * colorscheme pt_black_insert
+autocmd InsertLeave * colorscheme pt_black
