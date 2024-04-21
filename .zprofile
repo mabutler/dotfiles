@@ -1,3 +1,3 @@
-if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
-	exec startx >/dev/null 2&>1
+if [ -z "$WAYLAND_DISPLAY" ] && [ "$XDG_VTNR" -eq 1 ]; then
+    exec sway > /var/log/sway 2>&1
 fi
