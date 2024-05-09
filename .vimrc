@@ -44,20 +44,18 @@ syntax sync minlines=30
 
 call plug#begin()
 Plug 'mattn/emmet-vim'
-Plug 'jelera/vim-javascript-syntax'
-"Plug 'vim-scripts/JavaScript-Indent'
 Plug 'KurtPreston/JavaScript-Indent' "fork of the vim-scripts; removes debug statement
 Plug 'othree/javascript-libraries-syntax.vim'
-Plug 'posva/vim-vue'
 Plug 'w0rp/ale'
 Plug 'airblade/vim-gitgutter'
 Plug 'tpope/vim-commentary'
 Plug 'ap/vim-css-color'
 Plug 'bkad/CamelCaseMotion'
-Plug 'shawncplus/phpcomplete.vim'
 Plug 'esalter-va/vim-checklist'
+Plug 'othree/html5.vim'
+Plug 'pangloss/vim-javascript'
+Plug 'evanleck/vim-svelte', {'branch': 'main'}
 Plug 'jwalton512/vim-blade'
-"Plug 'Valloric/YouCompleteMe'
 call plug#end()
 
 " CamelCaseMotion
